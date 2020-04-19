@@ -129,6 +129,7 @@ function loadFriends() {
     resetScores();
     resetRight();
     resetDim();
+    shuffleCards()
     theme.innerText = "Friends";
     for (var i = 0; i < 2; i++) {
         document.getElementsByClassName("one")[i].style.backgroundImage = "url('./images/ChandlerBing.png')"
@@ -144,6 +145,7 @@ function loadHP() {
     resetScores();
     resetRight();
     resetDim();
+    shuffleCards()
     theme.innerText = "Harry Potter"
     for (var i = 0; i < 2; i++) {
         document.getElementsByClassName("one")[i].style.backgroundImage = "url('./images/HarryPotter.jpg')"
@@ -159,6 +161,7 @@ function loadHIMYM() {
     resetScores();
     resetRight();
     resetDim();
+    shuffleCards()
     theme.innerText = "How I met Your Mother"
     for (var i = 0; i < 2; i++) {
         document.getElementsByClassName("one")[i].style.backgroundImage = "url('./images/Ted.jpg')";
