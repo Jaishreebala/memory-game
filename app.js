@@ -21,7 +21,6 @@ for (var i = 0; i < gameCards.length; i++) {
 shuffleButton.addEventListener("click", shuffleCards)
 playAgain.addEventListener("click", function () {
     location.reload();
-    // shuffleCards();
 })
 theme.addEventListener("click", switchThemes)
 document.getElementById("option-1").addEventListener("click", loadHP);
@@ -34,10 +33,8 @@ function turnCard(e) {
     if (openCards < 2) {
         this.firstElementChild.classList.add("turn-left");
         openCards += 1
-        // console.log(openCards)
     }
     var time = 1500;
-    // console.log(time)
     delay = setTimeout(matchCard, time);
 
 }
@@ -115,7 +112,6 @@ function shuffleCards() {
     resetRight();
     resetDim();
     let startIndex = Math.floor(Math.random() * 12);
-    console.log(startIndex)
     for (var i = 1; i <= gameCards.length; i++) {
         let index1 = startIndex % gameCards.length;
         let index2 = (startIndex + i) % gameCards.length;
@@ -123,7 +119,6 @@ function shuffleCards() {
         gameCards[index1].innerHTML = gameCards[index2].innerHTML;
         gameCards[index2].innerHTML = tempCard;
         startIndex++;
-        console.log(gameCards[index1]);
     }
 }
 
