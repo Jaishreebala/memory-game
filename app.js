@@ -161,7 +161,7 @@ function loadHIMYM() {
     resetDim();
     theme.innerText = "How I met Your Mother"
     for (var i = 0; i < 2; i++) {
-        document.getElementsByClassName("one")[i].style.backgroundImage = "url('./images/TedMosby.jpg')";
+        document.getElementsByClassName("one")[i].style.backgroundImage = "url('./images/Ted.jpg')";
         document.getElementsByClassName("two")[i].style.backgroundImage = "url('./images/RobinScherbatsky.png')"
         document.getElementsByClassName("three")[i].style.backgroundImage = "url('./images/Tracy.jpg')"
         document.getElementsByClassName("four")[i].style.backgroundImage = "url('./images/Lily.png')"
