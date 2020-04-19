@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(238.2deg, #FF5E62, #FF9966 );
+    font-family: 'Rancho', cursive;
+    min-height: 100vh;
+    color: #fff;
+    padding: 0 2rem;
+    font-size: 20px;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#shuffle img{
+    height: 2rem;
+    width: 2rem;
+}
+#shuffle{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.left-row, .right-row{
+    display: flex;
+    flex-direction: row;
+}
+.score-card{
+    background-color: rgba(250, 250, 250, 0.1 );
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.game-cards-container{
+    width: calc(100% - 4rem);
+    display: flex;
+    min-height: calc(100% - 100px);
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* change for changing spacing of cards */
+    padding: 0 0rem;
+}
+
+.game-card{
+    
+    --width: 150px;
+    --height:200px;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    /* change for changing spacing of cards */
+    margin: 0.5rem 2rem;
+}
+
+.white-card{
+    /* --width: 175px;
+    --height:225px; */
+    position: absolute;
+    background-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.card{
+    position: absolute;
+    background-color: rgb(114, 46, 46);
+    width: var(--width);
+    height: var(--height);
+    border-radius: 10px;
+    z-index: -1;
+}
+.one{
+ background-image: url("./images/SiriusBlack.jpg");
+ background-size: var(--width) var(--height);
+}
+.two{
+    background-image: url('./images/Voldemort.jpg');
+    background-size: var(--width) var(--height);
+}
+.three{
+    background-image: url("./images/SeverusSnape.jpg");
+    background-size: var(--width) var(--height);
+}
+.four{
+    background-image: url("./images/RonWeasley.jpg");
+    background-size: var(--width) var(--height);
+}
+
+.five{
+    background-image: url("./images/HermioneGranger.png");
+    background-size: var(--width) var(--height);
+}
+
+.six{
+    background-image: url("./images/HarryPotter.jpg");
+    background-size: var(--width) var(--height);
+}
+
+.turn-left{
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 180deg);
+    transform-origin: left;
+    transition: ease all 1s;
+}
+
+.turn-right{
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 180deg);
+    transform-origin: right;
+    transition: ease all 1s;
+}
+.dim{
+    opacity: 0.5;
+    transition: ease all 1s;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.winning-screen{
+    min-height: 100vh;
+ display: none;
+}
+
+.win-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    padding-bottom: 2rem;
+    border-bottom: #fff solid 1px;
+    font-size: 5rem;
+}
+
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.fade-out{
+    opacity: 0;
+    display: none;
+    transition: all ease 2s;
+}
+
+.fade-in{
+    opacity: 1;
+    display: block;
+    transition: all ease 3s;
+}
+
+select{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(203, 0, 0);
+
+}
+
+#game-options{
+    background-color: rgba(250, 250, 250, 0.1 );
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+color: #fff;
+font-family: fantasy;
+font-size: 1rem;
+}
+
+.choose-theme-popup{
+    background: linear-gradient(52.84deg, #FF9966 0%, #FF5E62 100.46%);
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+height: 50vh;
+width: 70vh;
+font-size: 3rem;
+text-align: center;
+display: none;
+}
+.options{
+    font-size: 2rem;
+    color: #5C2EA8;
+    padding: 1rem;
+    cursor: pointer;
+}
+.options:hover{
+    border-bottom: 1px #fff solid;
+    transition: 0.5s;
+}
+

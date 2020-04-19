@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+</head>
+
+<body onload="loadHIMYM()">
+    <header>
+        <div class="left-row">
+            <div id="shuffle">
+                <img src="./images/shuffle.svg" alt="shuffle" title="Shuffle">
+            </div>
+            <div class="score-card">
+                Lives: <span id="lives">3</span>
+            </div>
+        </div>
+        <div class="right-row">
+            <div class="score-card">
+                Score: <span id="score">0</span>
+            </div>
+
+            <div class="score-card">
+                <span id="theme">Harry Potter</span>
+            </div>
+        </div>
+
+    </header>
+    <div class="game-cards-container">
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card four" id="four"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card one" id="one"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card five" id="five"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card two" id="two"></div>
+        </div>
+
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card three" id="three"></div>
+        </div>
+
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card six" id="six"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card two" id="two"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card one" id="one"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card four" id="four"> </div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card five" id="five"></div>
+        </div>
+
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card three" id="three"></div>
+        </div>
+        <div class="game-card">
+            <div class="white-card">
+                <img src="./images/question.svg" alt="?">
+            </div>
+            <div class="card six" id="six"></div>
+        </div>
+
+    </div>
+    <div class="choose-theme-popup">
+        <div style="padding: 1rem 0; height: 6rem;"> Change theme:</div>
+
+        <div class="options" id="option-1">Harry Potter</div>
+        <div class="options" id="option-2">Friends</div>
+        <div class="options" id="option-3">How I Met Your Mother</div>
+    </div>
+    <div class="winning-screen">
+        <div class="win-text" id="win-text-content">
+            You Won!!!
+        </div>
+        <div class="play" id="playAgainButton">
+            Play again
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
